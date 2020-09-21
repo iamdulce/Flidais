@@ -1,4 +1,14 @@
-* {
+:root {
+  --body-font: "Raleway", sans-serif;
+  --titles-font: "Satisfy", cursive;
+  --clr-bg-links: #f5c401;
+  --clr-text-links: #012622;
+}
+
+/*------Global styles------*/
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,8 +16,171 @@
 
 html {
   font-size: 62.6%;
+  font-family: var(--body-font);
+  scroll-behavior: smooth;
 }
 
 .icon-quotes-left:before {
   content: "\e977";
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3.9rem 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+} /*The img never overflow its parent*/
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/*------Header------*/
+header {
+  width: 100%;
+}
+
+.nav {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+.nav__toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 150;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  outline: none;
+  border-radius: 20%;
+  padding: 0 0.6rem;
+  margin: 1rem 0;
+  margin-left: -1.5rem;
+  background-color: var(--clr-bg-links);
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav__list {
+  list-style: none;
+  text-align: center;
+  background-color: var(--clr-bg-links);
+  padding: 4.4rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 125;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+}
+
+.nav__link {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  color: var(--clr-text-links);
+}
+
+.hamburger {
+  display: block;
+  position: relative; /*The main content (line) is relative to the button*/
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: var(--clr-text-links);
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  position: absolute; /*Can move the lines created with the pseudo-el*/
+  left: 0;
+} /*Allows to make the lines visibles*/
+
+.hamburger::after {
+  top: -0.6rem;
+}
+
+.hamburger::before {
+  bottom: -0.6rem;
+}
+
+.nav-open .nav__list {
+  transform: translateX(0);
+}
+
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  opacity: 0;
+}
+
+.nav-open .hamburger::after {
+  transform: rotate(-90deg) translateX(-6px);
+}
+
+/*------Hero section------*/
+.hero {
+  height: 100vh;
+  background-image: url(/images/mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__title {
+  font-family: var(--titles-font);
+  font-size: 5rem;
+}
+
+.hero__text {
+  font-size: 2rem;
 }
