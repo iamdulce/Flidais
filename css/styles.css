@@ -1,8 +1,11 @@
 :root {
-  --body-font: "Raleway", sans-serif;
-  --titles-font: "Satisfy", cursive;
-  --clr-bg-links: #f5c401;
-  --clr-text-links: #012622;
+  --body-font: "Lora", serif;
+  --special-font: "Italianno", cursive;
+  --clr-text: #012622;
+  --clr-body: #fbf5f3;
+  --clr-bg-links: #003b36;
+  --hor-spacing: 0 2.4rem;
+  --ver-spacing: 3.9rem 0;
 }
 
 /*------Global styles------*/
@@ -25,17 +28,19 @@ html {
 }
 
 body {
+  background-color: var(--clr-body);
   width: 100vw;
   overflow-x: hidden;
 }
 
 section {
-  padding: 3.9rem 0;
+  padding: var(--ver-spacing);
 }
 
 img {
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
+  object-fit: cover;
 } /*The img never overflow its parent*/
 
 a {
@@ -43,14 +48,14 @@ a {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .container {
   width: 100%;
   max-width: 122.5rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
+  padding: var(--hor-spacing);
 }
 
 /*------Header------*/
@@ -59,9 +64,6 @@ header {
 }
 
 .nav {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   height: 6rem;
   display: flex;
   align-items: center;
@@ -73,7 +75,7 @@ header {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 150;
+  z-index: 1500;
   width: 3rem;
   height: 3rem;
   border: 0;
@@ -100,7 +102,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  z-index: 125;
+  z-index: 1400;
   transform: translateX(-100%);
   transition: transform 0.5s;
 }
@@ -110,13 +112,13 @@ header {
 }
 
 .nav__link {
-  color: white;
-  font-size: 1.6rem;
+  color: var(--clr-body);
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 .nav__link:hover {
   text-decoration: underline;
-  color: var(--clr-text-links);
 }
 
 .hamburger {
@@ -129,7 +131,7 @@ header {
 .hamburger::after {
   width: 1.8rem;
   height: 0.2rem;
-  background-color: var(--clr-text-links);
+  background-color: var(--clr-body);
   transition: transform 350ms ease-in-out, opacity 200ms linear;
 }
 
@@ -167,20 +169,131 @@ header {
 /*------Hero section------*/
 .hero {
   height: 100vh;
-  background-image: url(/images/mobile.jpg);
-  background-position: center;
+  width: 100%;
+  background: url("/images/mobile.jpg") center no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 1; /*Permite reducir la distancia entre lineas*/
 }
 
 .hero__title {
-  font-family: var(--titles-font);
-  font-size: 5rem;
+  font-family: var(--special-font);
+  font-size: 8rem;
+  letter-spacing: 1px;
 }
 
 .hero__text {
-  font-size: 2rem;
+  font-size: 2.2rem;
+}
+
+/*------Top products section------*/
+.products-text,
+.new-products,
+.products-ad,
+.new-kits {
+  margin: var(--ver-spacing);
+}
+
+.new-products,
+.new-kits {
+  position: relative;
+  z-index: -1;
+}
+
+.new-products-description,
+.new-kits-description {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  justify-content: center;
+  text-align: center;
+  background: rgba(251, 245, 243, 0.5);
+  height: auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+.products-text__title,
+.products-ad__title,
+.new-products-description__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.new-products-description__link,
+.new-kits-description__link {
+  font-size: 1.4rem;
+  color: var(--clr-text);
+  margin-top: 2rem;
+}
+
+.products-text {
+  min-height: 22rem;
+  max-width: 40rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background-color: #48a9a6;
+  color: var(--clr-body);
+}
+
+.products-text::before {
+  content: "";
+  height: 0.2rem;
+  width: 5rem;
+  background-color: var(--clr-body);
+  margin-bottom: 2rem;
+}
+
+.products-text::after {
+  content: "";
+  height: 0.2rem;
+  width: 5rem;
+  background-color: var(--clr-body);
+  margin-top: 2rem;
+}
+
+.products-ad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--clr-bg-links);
+  height: 20rem;
+  max-width: 20rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--clr-body);
+}
+
+.products-text__link {
+  color: var(--clr-body);
+  font-size: 1.4rem;
+  padding-top: 1rem;
+}
+
+.products-ad__text {
+  padding-top: 0.8rem;
+}
+
+.new-products-description__text {
+  font-size: 1.4rem;
+}
+
+.new-kits-description__text {
+  font-family: var(--special-font);
+  font-size: 2.8rem;
+  letter-spacing: 1px;
 }
