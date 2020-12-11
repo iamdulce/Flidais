@@ -73,6 +73,7 @@ header {
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 1500;
 }
 
 .nav__toggle {
@@ -210,7 +211,7 @@ header {
 .new-products,
 .new-kits {
   position: relative;
-  z-index: -1;
+  z-index: 1100;
   max-width: 60rem;
   width: 100%;
 }
