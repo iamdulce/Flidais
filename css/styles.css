@@ -40,10 +40,10 @@ section {
 img {
   width: 100%;
   height: 100%;
-
   display: block;
   object-fit: cover;
-  /* max-width: 100%; */
+  max-height: 500px;
+  max-width: 100%; /*TRIYNG TO SEE IF IT WORKS*/
 } /*The img never overflow its parent*/
 
 a {
@@ -212,7 +212,7 @@ header {
 .new-kits {
   position: relative;
   z-index: 1100;
-  max-width: 60rem;
+  max-width: 50rem;
   width: 100%;
 }
 
