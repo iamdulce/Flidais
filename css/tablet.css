@@ -1,0 +1,19 @@
+.hero {
+  background: url(../images/bg-tablet.webp) center no-repeat;
+  background-size: cover;
+}
+
+.follow-us__img-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonials-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial__quote {
+  max-width: 500px;
+}

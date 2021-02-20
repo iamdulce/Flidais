@@ -43,7 +43,7 @@ img {
   display: block;
   object-fit: cover;
   max-height: 500px;
-  max-width: 100%; /*TRIYNG TO SEE IF IT WORKS*/
+  max-width: 100%;
 } /*The img never overflow its parent*/
 
 a {
@@ -379,7 +379,6 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3px;
-  /* grid-template-rows: repeat(3, 1fr); */
 }
 
 .follow-us__img-item {

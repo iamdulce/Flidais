@@ -1,0 +1,26 @@
+.hero {
+  background: url(../images/bg-desktop.webp) center no-repeat;
+  background-size: cover;
+}
+
+.top-products-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "products-text new-products"
+    "new-kits products-ad";
+  align-items: center;
+  justify-items: center;
+}
+
+.new-kits {
+  grid-area: new-kits;
+}
+
+.follow-us__img-container {
+  display: inline-flex;
+}
+
+.testimonial__quote {
+  max-width: 300px;
+}

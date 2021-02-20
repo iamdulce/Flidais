@@ -13,7 +13,16 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <!--Mobile first-->
-    <link rel="stylsheet" href="css/tablet.css" media="(min-width: 768px)" />
+    <link
+      rel="stylesheet"
+      href="css/tablet.css"
+      media="screen and (min-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/desktop.css"
+      media="screen and (min-width: 1024px)"
+    />
     <title>Flidais</title>
   </head>
   <body>
@@ -26,13 +35,15 @@
           <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Products</a>
+              <a href="#top-products" class="nav__link">Products</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">About us</a>
+              <a href="#about-us" class="nav__link">About us</a>
             </li>
             <li class="nav__item"><a href="#" class="nav__link">Faq</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            <li class="nav__item">
+              <a href="#footer" class="nav__link">Contact</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -48,7 +59,7 @@
     <!--Hero section ends-->
 
     <main class="main">
-      <section class="top-products">
+      <section class="top-products" id="top-products">
         <div class="container">
           <div class="top-products-content">
             <div class="products-text">
@@ -106,7 +117,7 @@
       </section>
       <!--Top products section ends-->
 
-      <section class="about-us">
+      <section class="about-us" id="about-us">
         <div class="container">
           <div class="about-us-content">
             <h2 class="about-us__title">About us</h2>
@@ -203,7 +214,7 @@
       <!--Testimonials section ends-->
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer-content">
           <h4 class="footer__title">Sign up for updates</h4>
