@@ -187,10 +187,15 @@ header {
   font-family: var(--special-font);
   font-size: 8rem;
   letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeDown 0.5s forwards;
 }
 
 .hero__text {
   font-size: 2.2rem;
+  animation: fadeUp 0.7s forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
 }
 
 /*------Top products section------*/
@@ -291,10 +296,16 @@ header {
   border-radius: 50%;
   background-color: var(--clr-bg-links);
   height: 20rem;
-  max-width: 20rem;
-  width: 100%;
+  max-width: 100%;
+  width: 20rem;
   padding: 2rem;
   color: var(--clr-body);
+  animation-name: grow;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .products-text__link {
@@ -498,4 +509,58 @@ header {
 
 .footer__link:hover {
   color: var(--clr-bg-links);
+}
+
+/*------Animations------*/
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*------Vertical scrollbar------*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(236, 167, 44, 0.8);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(236, 167, 44, 0.4);
 }

@@ -11,3 +11,27 @@ navItems.forEach((i) =>
     document.body.classList.remove("nav-open");
   })
 );
+
+//Scroll reveal
+window.sr = ScrollReveal();
+
+sr.reveal(".go-up", {
+  origin: "bottom",
+  duration: "900",
+  distance: "20rem",
+  delay: 0,
+});
+
+sr.reveal(".go-left", {
+  origin: "right",
+  duration: "900",
+  distance: "20rem",
+  delay: 0,
+});
+
+sr.reveal(".go-right", {
+  origin: "left",
+  duration: "900",
+  distance: "20rem",
+  delay: 0,
+});

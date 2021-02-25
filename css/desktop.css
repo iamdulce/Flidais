@@ -1,6 +1,22 @@
+section {
+  padding: 8rem 0;
+}
+
+.nav__link {
+  font-size: 1.8rem;
+}
+
 .hero {
   background: url(../images/bg-desktop.webp) center no-repeat;
   background-size: cover;
+}
+
+.hero__title {
+  font-size: 14rem;
+}
+
+.hero__text {
+  font-size: 3rem;
 }
 
 .top-products-content {
@@ -15,6 +31,29 @@
 
 .new-kits {
   grid-area: new-kits;
+}
+
+.products-ad {
+  height: 30rem;
+  width: 30rem;
+}
+
+.products-text__link,
+.new-products-description__text,
+.new-products-description__link,
+.new-kits-description__link,
+.about-us__link {
+  font-size: 1.6rem;
+}
+
+.new-kits-description__text,
+.about-us__titlem,
+.testimonials__title {
+  font-size: 3.2rem;
+}
+
+.testimonial__quote-author {
+  font-size: 2.6rem;
 }
 
 .follow-us__img-container {
